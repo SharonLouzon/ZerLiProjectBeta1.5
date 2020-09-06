@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="923.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.AccountControl">
+   <children>
+      <ImageView fitHeight="923.0" fitWidth="850.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/empty_background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="673.0" layoutY="181.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCancelOrder" layoutX="693.0" layoutY="177.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="122.0" text="btnCancelOrder" />
+      <Label layoutX="697.0" layoutY="182.0" text="Cancel Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="539.0" layoutY="183.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCatalog" layoutX="556.0" layoutY="176.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="103.0" text="btnCatalog" />
+      <Label layoutX="574.0" layoutY="181.0" text="Catalog" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCustomise" layoutX="416.0" layoutY="177.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="103.0" text="btnCustomise" />
+      <Label layoutX="433.0" layoutY="182.0" text="Customise" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnHome" layoutX="745.0" layoutY="15.0" mnemonicParsing="false" onAction="#goHome" opacity="0.01" prefHeight="38.0" prefWidth="82.0" text="btnHome" />
+      <Button fx:id="btnAccount" layoutX="563.0" layoutY="15.0" mnemonicParsing="false" opacity="0.01" prefHeight="38.0" prefWidth="87.0" text="btnAccount" />
+      <Button fx:id="btnLogout" layoutX="454.0" layoutY="15.0" mnemonicParsing="false" onAction="#logoutEvent" opacity="0.01" prefHeight="38.0" prefWidth="97.0" text="btnLogout" />
+      <Button fx:id="btnCart" layoutX="660.0" layoutY="17.0" mnemonicParsing="false" opacity="0.01" prefHeight="38.0" prefWidth="75.0" text="btnCart" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ChainWorker.CatalogEditControl">
+   <children>
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/empty_background.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogout" layoutX="538.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutEvent" opacity="0.01" prefHeight="38.0" prefWidth="97.0" text="btnLogout" />
+      <Button fx:id="btnAccount" layoutX="649.0" layoutY="14.0" mnemonicParsing="false" opacity="0.01" prefHeight="38.0" prefWidth="87.0" text="btnAccount" />
+      <Button fx:id="btnHome" layoutX="744.0" layoutY="14.0" mnemonicParsing="false" onAction="#goHome" opacity="0.01" prefHeight="38.0" prefWidth="82.0" text="btnHome" />
+      <Button fx:id="btnEditCatalog" layoutX="704.0" layoutY="174.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="103.0" text="btnEditCatalog" />
+      <Label layoutX="722.0" layoutY="185.0" text="Edit Catalog" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="titleLabel" layoutX="360.0" layoutY="278.0" text="EDIT CATALOG">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="anchorPaneAddItem" layoutX="40.0" layoutY="335.0" prefHeight="530.0" prefWidth="770.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="538.0" stroke="TRANSPARENT" strokeType="INSIDE" width="770.0">
+               <effect>
+                  <DropShadow />
+               </effect></Rectangle>
+            <Label layoutX="15.0" layoutY="73.0" text="Item name:">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="132.0" text="Description:">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="336.0" text="Price:">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="266.0" text="Type:">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="398.0" text="Picture address:">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="saveBtn" layoutX="14.0" layoutY="473.0" mnemonicParsing="false" onAction="#saveEvent" prefHeight="38.0" prefWidth="176.0" text="Save" />
+            <Button fx:id="backBtn" layoutX="232.0" layoutY="473.0" mnemonicParsing="false" onAction="#backEvent" prefHeight="38.0" prefWidth="176.0" text="Back" />
+            <TextField fx:id="itemNameTextField" layoutX="233.0" layoutY="79.0" prefHeight="30.0" prefWidth="224.0" />
+            <TextField fx:id="descriptionTextField" layoutX="233.0" layoutY="132.0" prefHeight="104.0" prefWidth="276.0" />
+            <TextField fx:id="typeTextField" layoutX="232.0" layoutY="266.0" prefHeight="51.0" prefWidth="276.0" />
+            <TextField fx:id="priceTextField" layoutX="233.0" layoutY="342.0" prefHeight="30.0" prefWidth="53.0" />
+            <TextField fx:id="imageTextField" layoutX="233.0" layoutY="398.0" prefHeight="30.0" prefWidth="333.0" />
+            <ImageView fx:id="newImage" fitHeight="212.0" fitWidth="187.0" layoutX="559.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="loadBtn" layoutX="597.0" layoutY="396.0" mnemonicParsing="false" onAction="#showImage" prefHeight="30.0" prefWidth="67.0" text="Load" />
+            <Label layoutX="286.0" layoutY="342.0" text="\$">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="20.0" text="Item ID:">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ItemIDTextField" layoutX="233.0" layoutY="26.0" prefHeight="30.0" prefWidth="224.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorPaneCatalog" layoutX="-3.0" layoutY="314.0" prefHeight="567.0" prefWidth="850.0">
+         <children>
+            <Button fx:id="btnDeleteItem" layoutX="553.0" layoutY="472.0" mnemonicParsing="false" onAction="#DeleteItemEvent" prefHeight="38.0" prefWidth="202.0" style="-fx-border-color: #000000; -fx-background-color: #ff3740;" text="Delete Selected Row">
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditItem" layoutX="326.0" layoutY="472.0" mnemonicParsing="false" onAction="#EditItemEvent" prefHeight="38.0" prefWidth="202.0" style="-fx-border-color: #000000; -fx-background-color: #55d921;" text="Edit Selected Row">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAddItem" layoutX="101.0" layoutY="472.0" mnemonicParsing="false" onAction="#AddItemEvent" prefHeight="38.0" prefWidth="202.0" style="-fx-border-color: #000000; -fx-background-color: #feba00;" text="Add Item">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <TableView fx:id="CatalogTable" layoutX="9.0" layoutY="14.0" prefHeight="435.0" prefWidth="837.0">
+               <columns>
+                  <TableColumn fx:id="CatalogImageColumn" prefWidth="155.0" resizable="false" text="Image" />
+                  <TableColumn fx:id="CatalogItemIDColumn" prefWidth="99.0" resizable="false" text="Item ID" />
+                  <TableColumn fx:id="CatalogItemNameColumn" prefWidth="153.0" text="Name" />
+                  <TableColumn fx:id="CatalogItemDescriptionColumn" prefWidth="238.0" text="Description" />
+                  <TableColumn fx:id="CatalogItemTypeColumn" prefWidth="128.0" resizable="false" text="Type" />
+                  <TableColumn fx:id="CatalogPriceColumn" minWidth="0.0" prefWidth="57.0" resizable="false" text="Price" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

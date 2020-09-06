@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="Window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Users.LoginContol">
+   <children>
+      <ImageView fx:id="ImageZerli" fitHeight="358.0" fitWidth="641.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/login.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="UserNameLabel" layoutX="169.0" layoutY="188.0" text="UserName:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="Password" layoutX="170.0" layoutY="241.0" text="Password:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="295.0" layoutY="191.0" prefHeight="30.0" prefWidth="177.0" promptText="Enter your username" />
+      <PasswordField fx:id="txtPassword" layoutX="294.0" layoutY="241.0" prefHeight="30.0" prefWidth="177.0" promptText="Enter Your Password" />
+      <Button fx:id="LoginBtn" layoutX="126.0" layoutY="292.0" mnemonicParsing="false" onAction="#ConnectToSystemEvent" prefHeight="36.0" prefWidth="167.0" text="Login" />
+      <Button fx:id="btnExit" layoutX="305.0" layoutY="292.0" mnemonicParsing="false" onAction="#Exit" prefHeight="36.0" prefWidth="167.0" text="Exit" />
+      <Label layoutX="539.0" layoutY="38.0" text="Port:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPORT" layoutX="573.0" layoutY="36.0" opacity="0.7" prefHeight="25.0" prefWidth="44.0" promptText="5555" />
+      <Label layoutX="399.0" layoutY="39.0" text="IP:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtServerIP" layoutX="425.0" layoutY="36.0" opacity="0.7" prefHeight="25.0" prefWidth="97.0" promptText="localhost" />
+   </children>
+</AnchorPane>

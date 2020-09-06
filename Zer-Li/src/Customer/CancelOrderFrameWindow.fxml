@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="809.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.CancelOrderControl">
+   <children>
+      <ImageView fitHeight="932.0" fitWidth="858.0" layoutX="-9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/empty_background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="673.0" layoutY="181.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="697.0" layoutY="182.0" text="Cancel Order" textFill="#00fefa">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="539.0" layoutY="183.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="574.0" layoutY="181.0" text="Catalog" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="433.0" layoutY="182.0" text="Customise" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnHome" layoutX="745.0" layoutY="15.0" mnemonicParsing="false" onAction="#goHome" opacity="0.01" prefHeight="38.0" prefWidth="82.0" text="btnHome" />
+      <Button fx:id="btnAccount" layoutX="563.0" layoutY="15.0" mnemonicParsing="false" onAction="#seeAccount" opacity="0.01" prefHeight="38.0" prefWidth="87.0" text="btnAccount" />
+      <Button fx:id="btnLogout" layoutX="454.0" layoutY="15.0" mnemonicParsing="false" onAction="#logoutEvent" opacity="0.01" prefHeight="38.0" prefWidth="97.0" text="btnLogout" />
+      <Button fx:id="btnCart" layoutX="660.0" layoutY="17.0" mnemonicParsing="false" onAction="#btnCartPressed" opacity="0.01" prefHeight="38.0" prefWidth="75.0" text="btnCart" />
+      <Button fx:id="btnCatalog" layoutX="563.0" layoutY="175.0" mnemonicParsing="false" onAction="#btnCatalogPressed" opacity="0.0" prefHeight="38.0" prefWidth="87.0" text="Button" />
+      <Label fx:id="branchLabelAtCatalog" layoutX="519.0" layoutY="240.0" text="LabelOfBranch" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="branchLabelAtCancel" layoutX="519.0" layoutY="240.0" text="LabelOfBranch" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="256.0" layoutY="283.0" text="Your previous orders">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font>
+      </Label>
+      <Button fx:id="customizeBtn" layoutX="428.0" layoutY="178.0" mnemonicParsing="false" onAction="#customizeBtnPressed" opacity="0.0" prefHeight="38.0" prefWidth="97.0" text="Button" />
+      <Button fx:id="cancelOrderBtn" layoutX="342.0" layoutY="660.0" mnemonicParsing="false" onAction="#cancelOrderBtnPressed" text="Cancel order">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="ordersTable" layoutX="108.0" layoutY="340.0" prefHeight="285.0" prefWidth="630.0">
+        <columns>
+          <TableColumn fx:id="orderIDColmun" prefWidth="109.0" text="OrderID" />
+          <TableColumn fx:id="branchNameColmun" prefWidth="125.0" text="Branch Name" />
+            <TableColumn fx:id="supplyDateColmun" prefWidth="140.0" text="Supply Date" />
+            <TableColumn fx:id="supplyHourColmun" prefWidth="140.0" text="Supply Hour" />
+            <TableColumn fx:id="priceColmun" prefWidth="115.0" text="Price" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

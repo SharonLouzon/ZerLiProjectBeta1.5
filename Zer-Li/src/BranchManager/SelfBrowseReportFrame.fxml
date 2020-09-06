@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="923.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BranchManager.OwnReportBrowseControl">
+   <children>
+      <ImageView fitHeight="923.0" fitWidth="850.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/empty_background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="673.0" layoutY="181.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBrowseBranchReport" layoutX="693.0" layoutY="177.0" mnemonicParsing="false" onAction="#BrowseBranchReport" opacity="0.0" prefHeight="38.0" prefWidth="122.0" text="btnBrowseBranchReport" />
+      <Label layoutX="697.0" layoutY="182.0" text="Browse Reports" textFill="#00e1ff">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="539.0" layoutY="183.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnDiscountingOnItem" layoutX="556.0" layoutY="176.0" mnemonicParsing="false" onAction="#DiscountingOnItem" opacity="0.0" prefHeight="38.0" prefWidth="103.0" text="btnDiscountingOnItem" />
+      <Label layoutX="574.0" layoutY="181.0" text="discounting" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCreatePaymentAccount" layoutX="416.0" layoutY="177.0" mnemonicParsing="false" onAction="#CreatePaymentAccount" opacity="0.0" prefHeight="38.0" prefWidth="103.0" text="btnCreatePaymentAccount" />
+      <Label layoutX="326.0" layoutY="183.0" text="Create Payment Account " textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnHome" layoutX="745.0" layoutY="15.0" mnemonicParsing="false" onAction="#goHome" opacity="0.01" prefHeight="38.0" prefWidth="82.0" text="btnHome" />
+      <Button fx:id="btnAccount" layoutX="563.0" layoutY="15.0" mnemonicParsing="false" opacity="0.01" prefHeight="38.0" prefWidth="87.0" text="btnAccount" />
+      <Button fx:id="btnLogout" layoutX="539.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutEvent" opacity="0.01" prefHeight="38.0" prefWidth="97.0" text="btnLogout" />
+      <TableView fx:id="tableV" layoutX="106.0" layoutY="358.0" onMouseClicked="#GetCsvFileReportFromTable" prefHeight="229.0" prefWidth="407.0">
+        <columns>
+          <TableColumn fx:id="ReportTypeCol" prefWidth="75.0" text="ReportType" />
+          <TableColumn fx:id="ReportYearCol" prefWidth="89.0" text="ReportYear" />
+            <TableColumn fx:id="ReportQuarterCol" prefWidth="75.0" text="ReportQuarter" />
+            <TableColumn fx:id="ImageCol" prefWidth="75.0" text="Image" />
+            <TableColumn fx:id="BranchIDCol" prefWidth="75.0" text="BranchID" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnCart" layoutX="660.0" layoutY="17.0" mnemonicParsing="false" opacity="0.01" prefHeight="38.0" prefWidth="75.0" text="btnCart" />
+      <Label fx:id="ResultLabel" layoutX="560.0" layoutY="340.0" text="Label" textFill="#d93434" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label fx:id="resultLbl" layoutX="560.0" layoutY="300.0" prefHeight="27.0" prefWidth="113.0" text="Report Results" textFill="#c7520e" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="ResultLabel1" layoutX="780.0" layoutY="340.0" text="Label" textFill="#d3472b" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

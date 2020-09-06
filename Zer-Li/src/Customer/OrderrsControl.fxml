@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="711.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.OrdersControl">
+   <children>
+      <ImageView fitHeight="809.0" fitWidth="788.0" layoutY="-7.0" onKeyTyped="#textFieldfilled" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/empty_background.jpg" />
+         </image></ImageView>
+      <Button fx:id="logoutBtn" layoutX="405.0" layoutY="8.0" mnemonicParsing="false" onAction="#logoutPressed" opacity="0.0" prefHeight="31.0" prefWidth="78.0" text="logOut" />
+      <Button fx:id="accountBtn" layoutX="496.0" layoutY="11.0" mnemonicParsing="false" onAction="#AccountBtnPressed" opacity="0.0" prefHeight="25.0" prefWidth="66.0" text="account" />
+      <Button fx:id="btnHome" layoutX="653.0" layoutY="11.0" mnemonicParsing="false" onAction="#HomePresssed" opacity="0.0" prefHeight="25.0" prefWidth="66.0" text="home" />
+      <Label fx:id="CheckoutLabel" layoutX="597.0" layoutY="153.0" text="Checkout" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="DeliverLabel" layoutX="483.0" layoutY="152.0" text="Delivery" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="YourcartLabel" layoutX="360.0" layoutY="153.0" text="Your cart" textFill="#34fffc">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="571.0" layoutY="151.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="455.0" layoutY="150.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="ItemInOrderTable" layoutX="151.0" layoutY="312.0" prefHeight="200.0" prefWidth="461.0" visible="false">
+        <columns>
+          <TableColumn fx:id="itemInOrderIDcolmun" editable="false" prefWidth="92.0" resizable="false" text="ID" />
+            <TableColumn fx:id="itemInOrderNameColmuns" editable="false" prefWidth="206.0" resizable="false" text="Name" />
+          <TableColumn fx:id="itemInOrderQtyColmun" editable="false" prefWidth="79.0" resizable="false" text="Quantity" />
+            <TableColumn fx:id="itemInOrderPriceColumns" editable="false" prefWidth="83.0" resizable="false" text="Price" />
+        </columns>
+      </TableView>
+      <CheckBox fx:id="AddGreetingChkBox" layoutX="121.0" layoutY="561.0" mnemonicParsing="false" onAction="#ChkBoxPressed" text="Add a greeting to your products" visible="false" />
+      <TextArea fx:id="txtGreeting" disable="true" layoutX="185.0" layoutY="594.0" prefHeight="119.0" prefWidth="357.0" visible="false" />
+      <Label fx:id="totalProductsAmountLabel" layoutX="483.0" layoutY="523.0" prefHeight="17.0" prefWidth="210.0" text="Total products: 0 items." visible="false" />
+      <Label fx:id="totalPriceLabel" layoutX="482.0" layoutY="547.0" prefHeight="17.0" prefWidth="210.0" text="Toal price: 0 $" visible="false" />
+      <Label fx:id="yourinvoiceLabel" layoutX="144.0" layoutY="264.0" text="Your cart:" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="messageAfterGreeting" layoutX="189.0" layoutY="720.0" prefHeight="17.0" prefWidth="395.0" text="Your greeting will be attached separately to every item in your invoice. " textFill="RED" visible="false" />
+      <Button fx:id="goToDelivery" layoutX="536.0" layoutY="217.0" mnemonicParsing="false" onAction="#goToDeliveryPressed" text="Procced to delivery-&gt;" visible="false" />
+      <Button fx:id="BackToCartBtn" layoutX="399.0" layoutY="217.0" mnemonicParsing="false" onAction="#BackToCartBtnPressed" text="&lt;- Back to you cart" visible="false" />
+      <Label layoutX="399.0" layoutY="193.0" text="Buying Process:" />
+      <Button fx:id="goToCheckoutBtn" layoutX="536.0" layoutY="217.0" mnemonicParsing="false" onAction="#goToCheckoutBtnPressed" text="Proceed to checkout -&gt;" visible="false" />
+      <Label fx:id="SupplyTimeLabel" layoutX="122.0" layoutY="273.0" prefHeight="39.0" prefWidth="237.0" text="Supply Time:" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="ShipmentLabel" layoutX="121.0" layoutY="463.0" prefHeight="39.0" prefWidth="237.0" text="Shipment:" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateLabel" layoutX="154.0" layoutY="338.0" text="Date:" visible="false" />
+      <Label fx:id="HourLabel" layoutX="154.0" layoutY="373.0" text="Hour:" visible="false" />
+      <DatePicker fx:id="ComboDate" editable="false" layoutX="199.0" layoutY="334.0" onAction="#comboBoxDatePressed" visible="false" />
+      <ComboBox fx:id="comboBoxHour" layoutX="199.0" layoutY="369.0" onAction="#comboBoxHourPressed" prefHeight="25.0" prefWidth="83.0" visible="false" />
+      <RadioButton fx:id="branchRadio" layoutX="125.0" layoutY="523.0" mnemonicParsing="false" onAction="#branchRadioChosen" text="Branch" visible="false">
+         <toggleGroup>
+            <ToggleGroup fx:id="delivery" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="privateAdressRadio" layoutX="125.0" layoutY="556.0" mnemonicParsing="false" onAction="#privateAdressRadioChosen" text="Private adress" toggleGroup="$delivery" visible="false" />
+      <ComboBox fx:id="comboBranch" disable="true" layoutX="212.0" layoutY="519.0" prefWidth="150.0" visible="false" />
+      <Label fx:id="adressShipmentLabel" layoutX="214.0" layoutY="594.0" text="Adress:" visible="false" />
+      <Label fx:id="adresseeShipmentLabel" layoutX="196.0" layoutY="633.0" text="Addressee:" visible="false" />
+      <Label fx:id="phoneNumberShipmentLabel" layoutX="170.0" layoutY="671.0" text="Phone Number:" visible="false" />
+      <TextField fx:id="adressShipmentTxt" disable="true" layoutX="267.0" layoutY="590.0" prefHeight="25.0" prefWidth="201.0" visible="false" />
+      <TextField fx:id="adresseeShipmentTxt" disable="true" layoutX="267.0" layoutY="629.0" prefHeight="25.0" prefWidth="201.0" visible="false" />
+      <TextField fx:id="phoneNumberTxt" disable="true" layoutX="357.0" layoutY="669.0" prefHeight="25.0" prefWidth="124.0" visible="false" />
+      <Label fx:id="aditionalCostLabel" layoutX="239.0" layoutY="556.0" prefHeight="17.0" prefWidth="210.0" text="Additional cost of 14.99 $" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="KidometPhone" disable="true" layoutX="270.0" layoutY="669.0" onAction="#KidometChosen" prefHeight="25.0" prefWidth="66.0" visible="false" />
+      <Label fx:id="makafKidometNumPhone" layoutX="343.0" layoutY="669.0" text="-" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="backToDeliveryBtn" layoutX="399.0" layoutY="217.0" mnemonicParsing="false" onAction="#backToDeliveryBtnPressed" prefHeight="25.0" prefWidth="118.0" text="&lt;-Back to delivery" visible="false" />
+      <Label fx:id="PA_userNameLabe" layoutX="130.0" layoutY="394.0" text="Payment account user name:" visible="false" />
+      <Label fx:id="CheckotFinalMainLabel" layoutX="122.0" layoutY="284.0" prefHeight="39.0" prefWidth="237.0" text="Checkout:" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="PA_PasswordLabe" layoutX="129.0" layoutY="429.0" prefHeight="17.0" prefWidth="176.0" text="Payment account passowrd:" visible="false" />
+      <TextField fx:id="PA_userName_txt" layoutX="298.0" layoutY="391.0" visible="false" />
+      <Button fx:id="payButton" layoutX="342.0" layoutY="540.0" mnemonicParsing="false" onAction="#payButtonPressed" text="Pay" visible="false" />
+      <Label fx:id="payMethodLabel" layoutX="211.0" layoutY="476.0" text="Pay method:" visible="false" />
+      <ComboBox fx:id="payMethodcomboBox" layoutX="298.0" layoutY="473.0" onAction="#payMethodcomboBoxPressed" prefWidth="150.0" visible="false" />
+      <PasswordField fx:id="PA_password_txt" layoutX="298.0" layoutY="426.0" visible="false" />
+      <Label fx:id="totalPriceResult" layoutX="128.0" layoutY="327.0" prefHeight="52.0" prefWidth="479.0" text="Label" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="809.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.CustomOrderControl">
+   <children>
+      <ImageView fitHeight="932.0" fitWidth="858.0" layoutX="-9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/empty_background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="673.0" layoutY="181.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="697.0" layoutY="182.0" text="Cancel Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="539.0" layoutY="183.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="574.0" layoutY="181.0" text="Catalog" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="433.0" layoutY="182.0" text="Customise" textFill="#00fefa">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="294.0" layoutY="282.0" text="Create new item">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnHome" layoutX="745.0" layoutY="15.0" mnemonicParsing="false" onAction="#goHome" opacity="0.01" prefHeight="38.0" prefWidth="82.0" text="btnHome" />
+      <Button fx:id="btnAccount" layoutX="563.0" layoutY="15.0" mnemonicParsing="false" onAction="#seeAccount" opacity="0.01" prefHeight="38.0" prefWidth="87.0" text="btnAccount" />
+      <Button fx:id="btnLogout" layoutX="454.0" layoutY="15.0" mnemonicParsing="false" onAction="#logoutEvent" opacity="0.01" prefHeight="38.0" prefWidth="97.0" text="btnLogout" />
+      <Button fx:id="btnCart" layoutX="660.0" layoutY="17.0" mnemonicParsing="false" onAction="#btnCartPressed" opacity="0.01" prefHeight="38.0" prefWidth="75.0" text="btnCart" />
+      <ImageView fx:id="imgController" fitHeight="38.0" fitWidth="117.0" layoutX="195.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="itemTypeLabel" layoutX="198.0" layoutY="350.0" text="Item Type:" />
+      <ComboBox fx:id="itemTypeCombo" layoutX="317.0" layoutY="346.0" onAction="#itemTypeComboPressed" prefHeight="25.0" prefWidth="181.0" />
+      <Label fx:id="PriceRangeLabel" layoutX="198.0" layoutY="385.0" prefHeight="17.0" prefWidth="82.0" text="Price Range:" />
+      <TextField fx:id="priceRangeMinTxt" layoutX="317.0" layoutY="410.0" prefHeight="25.0" prefWidth="110.0" />
+      <TextField fx:id="priceRangeMaxTxt" layoutX="317.0" layoutY="451.0" prefHeight="25.0" prefWidth="110.0" />
+      <Label fx:id="minLabel" layoutX="271.0" layoutY="414.0" text="Min:" />
+      <Label fx:id="MaxLabel" layoutX="269.0" layoutY="455.0" text="Max:" />
+      <Label fx:id="DominantColorLabel" layoutX="119.0" layoutY="500.0" text="Dominant Color(Optional):" />
+      <ComboBox fx:id="DominantColorCombo" layoutX="318.0" layoutY="495.0" onAction="#DominantColorComboPressed" prefWidth="150.0" />
+      <Button fx:id="createItemBtn" layoutX="539.0" layoutY="426.0" mnemonicParsing="false" onAction="#createItemBtnPressed" text="-&gt;Create your Item" />
+      <Label layoutX="181.0" layoutY="350.0" text="*" textFill="RED">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="181.0" layoutY="385.0" text="*" textFill="RED">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="433.0" layoutY="414.0" text="\$" />
+      <Label layoutX="433.0" layoutY="456.0" text="\$" />
+      <Label layoutX="549.0" layoutY="456.0" text="*At least 15 flowers in product" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCatalog" layoutX="563.0" layoutY="175.0" mnemonicParsing="false" onAction="#btenCatalogPressed" opacity="0.0" prefHeight="38.0" prefWidth="87.0" text="Button" />
+      <TableView fx:id="flowersCompositionTable" editable="true" layoutX="190.0" layoutY="547.0" prefHeight="200.0" prefWidth="436.0">
+        <columns>
+          <TableColumn fx:id="FlowerIDClomun" editable="false" prefWidth="85.0" resizable="false" text="FlowerID" />
+          <TableColumn fx:id="FlowerNameClomun" editable="false" prefWidth="129.0" resizable="false" text="Flower name" />
+            <TableColumn fx:id="FlowerColorClomun" editable="false" prefWidth="106.0" resizable="false" text="Flower color" />
+            <TableColumn fx:id="FlowerPriceClomun" editable="false" prefWidth="115.0" resizable="false" text="Flower price" />
+        </columns>
+      </TableView>
+      <Label fx:id="labelQtyFlower" layoutX="535.0" layoutY="770.0" text="Number of flowers: 0 items" />
+      <Label fx:id="labelItemPrice" layoutX="537.0" layoutY="787.0" text="Item price: 0$" />
+      <Button fx:id="addToCartBtn" disable="true" graphicTextGap="66.0" layoutX="679.0" layoutY="590.0" mnemonicParsing="false" onAction="#addToCartBtnPressed" text="Add to cart-&gt;" textFill="#09ff00">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeBtnCart" disable="true" layoutX="679.0" layoutY="647.0" mnemonicParsing="false" onAction="#removeBtnCartPressed" text="&lt;-Remove from cart" textFill="RED">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="basketStatusLabel" layoutX="672.0" layoutY="560.0" text="Label" visible="false" />
+      <Label fx:id="branchLabelAtCatalog" layoutX="519.0" layoutY="240.0" text="LabelOfBranch" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelBtn" layoutX="694.0" layoutY="174.0" mnemonicParsing="false" onAction="#cancelBtnPressed" opacity="0.0" prefHeight="45.0" prefWidth="116.0" text="Button" />
+   </children>
+</AnchorPane>

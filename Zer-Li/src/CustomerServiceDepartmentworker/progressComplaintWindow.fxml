@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="CustomerServiceDepartmentworker.progressComplaintController">
+   <children>
+      <GridPane prefHeight="356.0" prefWidth="490.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="201.0" minHeight="0.0" prefHeight="19.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="212.0" minHeight="10.0" prefHeight="212.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label mouseTransparent="true" prefHeight="17.0" prefWidth="424.0" text="Update Complaint Progress" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" GridPane.ColumnSpan="2">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label text="Topic" GridPane.rowIndex="1" />
+            <Label text="Details" GridPane.rowIndex="2" />
+            <Button fx:id="Save" mnemonicParsing="false" text="Save" GridPane.rowIndex="3" />
+            <Button fx:id="CloseComplaint" mnemonicParsing="false" text="Close Complaint" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="topic" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="details" prefHeight="204.0" prefWidth="245.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

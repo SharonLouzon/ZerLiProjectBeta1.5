@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="923.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BranchManager.CreatePaymentAccountController">
+   <children>
+      <ImageView fitHeight="923.0" fitWidth="850.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/empty_background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="673.0" layoutY="181.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBrowseBranchReport" layoutX="693.0" layoutY="177.0" mnemonicParsing="false" onAction="#BrowseBranchReport" opacity="0.0" prefHeight="38.0" prefWidth="122.0" text="btnBrowseBranchReport" />
+      <Label layoutX="697.0" layoutY="182.0" text="Browse Reports" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="539.0" layoutY="183.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnDiscountingOnItem" layoutX="556.0" layoutY="176.0" mnemonicParsing="false" onAction="#DiscountingOnItem" opacity="0.0" prefHeight="38.0" prefWidth="103.0" text="btnDiscountingOnItem" />
+      <Label layoutX="574.0" layoutY="181.0" text="discounting" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCreatePaymentAccount" layoutX="416.0" layoutY="177.0" mnemonicParsing="false" onAction="#CreatePaymentAccount" opacity="0.0" prefHeight="38.0" prefWidth="103.0" text="btnCreatePaymentAccount" />
+      <Label layoutX="326.0" layoutY="183.0" text="Create Payment Account " textFill="#00ffd4">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnHome" layoutX="745.0" layoutY="15.0" mnemonicParsing="false" onAction="#goHome" opacity="0.01" prefHeight="38.0" prefWidth="82.0" text="btnHome" />
+      <Button fx:id="btnAccount" layoutX="563.0" layoutY="15.0" mnemonicParsing="false" opacity="0.01" prefHeight="38.0" prefWidth="87.0" text="btnAccount" />
+      <Button fx:id="btnLogout" layoutX="539.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutEvent" opacity="0.01" prefHeight="38.0" prefWidth="97.0" text="btnLogout" />
+      <Button fx:id="btnCart" layoutX="660.0" layoutY="17.0" mnemonicParsing="false" opacity="0.01" prefHeight="38.0" prefWidth="75.0" text="btnCart" />
+      
+            <Label layoutX="75.0" layoutY="256.0" prefHeight="88.0" prefWidth="421.0" text="New Paymwent Account " textFill="LIME">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font></Label>
+      <Label fx:id="UserNameLabel" layoutX="44.0" layoutY="364.0" text="Customer ID" textFill="RED">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="Password" layoutX="44.0" layoutY="582.0" text="Cvv CreditCard Num" textFill="RED">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="ConnectBtn" layoutX="480.0" layoutY="534.0" mnemonicParsing="false" onAction="#SaveOnDB" prefHeight="43.0" prefWidth="226.0" text="Create new account" textFill="#dd0d0d">
+         <font>
+            <Font name="System Italic" size="17.0" />
+         </font></Button>
+      <Label fx:id="UserNameLabel1" layoutX="49.0" layoutY="328.0" text="User Name:" textFill="RED">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="UserNameLabel2" layoutX="50.0" layoutY="614.0" text="CreditCard Type" textFill="RED">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="UserNameLabel3" layoutX="46.0" layoutY="550.0" text="CreditCard Exp Date" textFill="RED">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="UserNameLabel4" layoutX="50.0" layoutY="518.0" text="CreditCard Num" textFill="RED">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="UserNameLabel5" layoutX="49.0" layoutY="398.0" text="Password" textFill="RED">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="UserNameLabel6" layoutX="50.0" layoutY="430.0" text="Payment Type" textFill="RED">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="UserNameLabel7" layoutX="56.0" layoutY="653.0" text="Subscription Type" textFill="RED">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtf1" layoutX="297.0" layoutY="338.0" />
+      <TextField fx:id="txtf2" layoutX="297.0" layoutY="367.0" />
+      <TextField fx:id="txtf4" layoutX="297.0" layoutY="522.0" />
+      <TextField fx:id="txtf5" layoutX="297.0" layoutY="553.0" />
+      <TextField fx:id="txtf6" layoutX="297.0" layoutY="585.0" />
+      <TextField fx:id="txtf7" layoutX="297.0" layoutY="617.0" />
+      <PasswordField fx:id="passtxt" layoutX="297.0" layoutY="401.0" />
+      <ComboBox fx:id="comboBoxPaymentType" layoutX="297.0" layoutY="434.0" prefWidth="150.0" />
+      <ComboBox fx:id="ComboBoxSubscriptionType" layoutX="297.0" layoutY="657.0" prefWidth="150.0" />
+      <Label fx:id="PhoneNumberLabel" layoutX="50.0" layoutY="477.0" text="Phone Number" textFill="RED">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phoneNumberTxt" layoutX="297.0" layoutY="481.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="923.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ChainManager.ChainManagerMainWindow">
+   <children>
+      <ImageView fitHeight="923.0" fitWidth="850.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/empty_background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="673.0" layoutY="181.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBrowseReport" layoutX="693.0" layoutY="177.0" mnemonicParsing="false" onAction="#BrowseReport" opacity="0.13" prefHeight="38.0" prefWidth="122.0" text="BrowseReport" />
+      <Label layoutX="697.0" layoutY="182.0" text="Browse Reports" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="CompareReportsBtn" layoutX="470.0" layoutY="176.0" mnemonicParsing="false" onAction="#CompareReports" opacity="0.18" prefHeight="38.0" prefWidth="189.0" text="CompareReports" />
+      <Label layoutX="445.0" layoutY="183.0" text="Compare Between Reports" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnHome" layoutX="745.0" layoutY="15.0" mnemonicParsing="false" onAction="#goHome" opacity="0.01" prefHeight="38.0" prefWidth="82.0" text="btnHome" />
+      <Button fx:id="btnAccount" layoutX="563.0" layoutY="15.0" mnemonicParsing="false" opacity="0.01" prefHeight="38.0" prefWidth="87.0" text="btnAccount" />
+      <Button fx:id="btnLogout" layoutX="539.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutEvent" opacity="0.01" prefHeight="38.0" prefWidth="97.0" text="btnLogout" />
+      <TableView fx:id="tableV" layoutX="106.0" layoutY="358.0" prefHeight="229.0" prefWidth="407.0">
+        <columns>
+          <TableColumn fx:id="ReportTypeCol" prefWidth="75.0" text="ReportType" />
+          <TableColumn fx:id="ReportYearCol" prefWidth="89.0" text="ReportYear" />
+            <TableColumn fx:id="ReportQuarterCol" prefWidth="75.0" text="ReportQuarter" />
+            <TableColumn fx:id="ImageCol" prefWidth="75.0" text="Image" />
+            <TableColumn fx:id="BranchIDCol" prefWidth="75.0" text="BranchID" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnCart" layoutX="660.0" layoutY="17.0" mnemonicParsing="false" opacity="0.01" prefHeight="38.0" prefWidth="75.0" text="btnCart" />
+   </children>
+</AnchorPane>

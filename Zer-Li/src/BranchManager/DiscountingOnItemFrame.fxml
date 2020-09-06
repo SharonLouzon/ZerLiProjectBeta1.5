@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="923.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BranchManager.DiscountingOnItemsControl">
+   <children>
+      <ImageView fitHeight="923.0" fitWidth="850.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/empty_background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="673.0" layoutY="181.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBrowseBranchReport" layoutX="693.0" layoutY="177.0" mnemonicParsing="false" onAction="#BrowseBranchReport" opacity="0.0" prefHeight="38.0" prefWidth="122.0" text="btnBrowseBranchReport" />
+      <Label layoutX="697.0" layoutY="182.0" text="Browse Reports" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="539.0" layoutY="183.0" text="|" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnDiscountingOnItem" layoutX="556.0" layoutY="176.0" mnemonicParsing="false" onAction="#DiscountingOnItem" opacity="0.0" prefHeight="38.0" prefWidth="103.0" text="btnDiscountingOnItem" />
+      <Label layoutX="561.0" layoutY="183.0" text="discounting" textFill="#00ffd4">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCreatePaymentAccount" layoutX="416.0" layoutY="177.0" mnemonicParsing="false" onAction="#CreatePaymentAccount" opacity="0.0" prefHeight="38.0" prefWidth="103.0" text="btnCreatePaymentAccount" />
+      <Label layoutX="326.0" layoutY="183.0" text="Create Payment Account " textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnHome" layoutX="745.0" layoutY="15.0" mnemonicParsing="false" onAction="#goHome" opacity="0.01" prefHeight="38.0" prefWidth="82.0" text="btnHome" />
+      <Button fx:id="btnAccount" layoutX="563.0" layoutY="15.0" mnemonicParsing="false" opacity="0.01" prefHeight="38.0" prefWidth="87.0" text="btnAccount" />
+      <Button fx:id="btnLogout" layoutX="539.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutEvent" opacity="0.01" prefHeight="38.0" prefWidth="97.0" text="btnLogout" />
+      <Button fx:id="btnCart" layoutX="660.0" layoutY="17.0" mnemonicParsing="false" opacity="0.01" prefHeight="38.0" prefWidth="75.0" text="btnCart" />
+      <AnchorPane fx:id="anchorpaneDiscounting" layoutX="43.0" layoutY="370.0" prefHeight="485.0" prefWidth="765.0">
+         <children>
+            <Button fx:id="discountingBtn" layoutX="622.0" layoutY="103.0" mnemonicParsing="false" onAction="#DisCountingPercent" prefHeight="65.0" prefWidth="30.0" text=" %" />
+            <TextField fx:id="percenttxt" layoutX="456.0" layoutY="135.0" prefHeight="27.0" prefWidth="149.0" promptText="percent" />
+            <TableView fx:id="MyTableV" layoutX="82.0" layoutY="27.0" onMouseClicked="#selectedItemGetId" prefHeight="200.0" prefWidth="260.0">
+              <columns>
+                <TableColumn fx:id="ItemIDCol" prefWidth="93.0" text="ItemID" />
+                  <TableColumn fx:id="BranchIDCol" prefWidth="95.0" text="BranchID" />
+                <TableColumn fx:id="PriceCol" prefWidth="71.0" text="Price" />
+              </columns>
+            </TableView>
+            <TextField fx:id="IDItemtext" layoutX="456.0" layoutY="102.0" promptText="IDItem" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
